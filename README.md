@@ -27,6 +27,27 @@
 
 <br>
 
+<!-- Code Rain Strip -->
+<svg width="600" height="35" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+  <style>
+    @keyframes fall { 0% { transform:translateY(-25px); opacity:0; } 15% { opacity:0.6; } 100% { transform:translateY(35px); opacity:0; } }
+    .r{ animation:fall 3s linear infinite; }
+    .d1{ animation-delay:0s; } .d2{ animation-delay:0.4s; } .d3{ animation-delay:0.8s; }
+    .d4{ animation-delay:1.2s; } .d5{ animation-delay:1.6s; } .d6{ animation-delay:2.0s; }
+  </style>
+  <text x="30" y="0" fill="#89CFF0" font-size="10" class="r d1">010</text>
+  <text x="90" y="0" fill="#89CFF0" font-size="10" class="r d2">101</text>
+  <text x="160" y="0" fill="#5DADE2" font-size="10" class="r d3">def</text>
+  <text x="230" y="0" fill="#89CFF0" font-size="10" class="r d4">while</text>
+  <text x="300" y="0" fill="#89CFF0" font-size="10" class="r d5">010</text>
+  <text x="370" y="0" fill="#5DADE2" font-size="10" class="r d6">import</text>
+  <text x="440" y="0" fill="#89CFF0" font-size="10" class="r d1">class</text>
+  <text x="510" y="0" fill="#5DADE2" font-size="10" class="r d3">110</text>
+  <text x="560" y="0" fill="#89CFF0" font-size="10" class="r d5">ret</text>
+</svg>
+
+<br>
+
 <!-- Tech Stack -->
 <div align="right">
   <sub>
