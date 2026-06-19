@@ -2,8 +2,11 @@ name: Update Daily Joke
 
 on:
   schedule:
-    - cron: "30 0 * * *"   # 每天 UTC 0:30（比 snake 晚半小时）
+    - cron: "5 0 * * *"    # 每天 UTC 0:05（北京时间 8:05，紧随 Snake 之后）
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-joke:
