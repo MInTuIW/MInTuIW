@@ -18,7 +18,7 @@ jobs:
       - name: Pick random joke & update README
         run: |
           python3 -c "
-import json, random, urllib.parse
+import json, random, urllib.parse, re
 
 with open('.github/jokes.json', 'r') as f:
     jokes = json.load(f)
@@ -29,12 +29,14 @@ encoded = urllib.parse.quote(joke, safe='')
 with open('README.md', 'r') as f:
     content = f.read()
 
-placeholder = '__JOKE_HERE__'
+# Find the joke line: replace lines=...&width in the joke SVG URL
+# Identified by containing 'JOKE_MARKER' comment after the img tag
+pattern = r'(<!-- Daily Joke.*?lines=)([^&]+)(&width)'
+replacement = r'\1' + encoded + r'\3'
+new_content = re.sub(pattern, replacement, content, count=1, flags=re.DOTALL)
 
-if placeholder in content:
-    new_content = content.replace(placeholder, encoded)
-else:
-    print('ERROR: __JOKE_HERE__ not found')
+if new_content == content:
+    print('ERROR: joke pattern not found')
     exit(1)
 
 with open('README.md', 'w') as f:
