@@ -10,7 +10,8 @@
 <br>
 
 <!-- Daily Joke (typing effect, no rollback) -->
-<img src="https://readme-typing-svg.demolab.com/?lines=<!-- JOKE:START -->Why+did+the+data+scientist+break+up+with+the+database%3F+Too+many+relationships.<!-- JOKE:END -->&width=600&height=28&font=Fira%20Code&size=15&pause=5000&color=89CFF0&vCenter=true&repeat=false" alt="" />
+<img src="https://readme-typing-svg.demolab.com/?lines=__JOKE_HERE__&width=600&height=28&font=Fira%20Code&size=15&pause=5000&color=89CFF0&vCenter=true&repeat=false" alt="" />
+<!-- JOKE_MARKER -->
 
 <br>
 
