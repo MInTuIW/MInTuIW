@@ -29,15 +29,12 @@ encoded = urllib.parse.quote(joke, safe='')
 with open('README.md', 'r') as f:
     content = f.read()
 
-start = '<!-- JOKE:START -->'
-end = '<!-- JOKE:END -->'
+placeholder = '__JOKE_HERE__'
 
-if start in content and end in content:
-    before = content.split(start)[0]
-    after = content.split(end)[1]
-    new_content = before + start + encoded + end + after
+if placeholder in content:
+    new_content = content.replace(placeholder, encoded)
 else:
-    print('ERROR: JOKE markers not found')
+    print('ERROR: __JOKE_HERE__ not found')
     exit(1)
 
 with open('README.md', 'w') as f:
