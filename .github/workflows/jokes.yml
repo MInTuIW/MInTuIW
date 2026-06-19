@@ -15,35 +15,41 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Pick random joke & generate SVG
+      - name: Pick random joke & update README
         run: |
           python3 -c "
-import json, random
+import json, random, urllib.parse
 
 with open('.github/jokes.json', 'r') as f:
     jokes = json.load(f)
 
 joke = random.choice(jokes)
+encoded = urllib.parse.quote(joke, safe='')
 
-# SVG template with fade-in animation
-svg = '''<svg width=\"650\" height=\"28\" xmlns=\"http://www.w3.org/2000/svg\">
-<style>
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
-  .j { animation: fadeIn 1.5s ease-out; }
-</style>
-<text x=\"0\" y=\"18\" fill=\"#6B9DB5\" font-family=\"monospace\" font-size=\"13\" class=\"j\">''' + joke + '''</text>
-</svg>'''
+with open('README.md', 'r') as f:
+    content = f.read()
 
-with open('assets/joke.svg', 'w') as f:
-    f.write(svg)
+start = '<!-- JOKE:START -->'
+end = '<!-- JOKE:END -->'
 
-print(f'Generated joke.svg with: {joke}')
+if start in content and end in content:
+    before = content.split(start)[0]
+    after = content.split(end)[1]
+    new_content = before + start + encoded + end + after
+else:
+    print('ERROR: JOKE markers not found')
+    exit(1)
+
+with open('README.md', 'w') as f:
+    f.write(new_content)
+
+print(f'Updated joke: {joke}')
 "
 
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/joke.svg
+          git add README.md
           git diff --staged --quiet || git commit -m "chore: update daily joke [skip ci]"
           git push
