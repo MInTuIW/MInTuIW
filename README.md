@@ -1,12 +1,13 @@
-<!-- Terminal-style header -->
+<!-- Typing Header: 4 lines typing simultaneously -->
 <div align="center">
 
-<pre style="background:transparent;border:none;color:#c9d1d9;font-family:'Fira Code','Cascadia Code',monospace;font-size:15px;line-height:1.7;text-align:left;">
-<span style="color:#89CFF0;">❯</span> Hi there 👋 I'm wangyihan
-<span style="color:#89CFF0;">❯</span> Data & AI · building things that learn
-<span style="color:#89CFF0;">❯</span> MSc Data Science · NLP · @UMAC
-<span style="color:#89CFF0;">❯</span> INTP → int *p  <span style="color:#8b949e;">// personality is just a pointer</span>
-</pre>
+<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9D%AF+Hi+there+%F0%9F%91%8B+I'm+wangyihan&width=600&height=28&font=Fira%20Code&size=15&pause=800&color=89CFF0&vCenter=true&repeat=false" alt="line1" />
+
+<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9D%AF+Data+%26+AI+%C2%B7+building+things+that+learn&width=600&height=28&font=Fira%20Code&size=15&pause=800&color=89CFF0&vCenter=true&repeat=false" alt="line2" />
+
+<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9D%AF+MSc+Data+Science+%C2%B7+NLP+%C2%B7+%40UMAC&width=600&height=28&font=Fira%20Code&size=15&pause=800&color=89CFF0&vCenter=true&repeat=false" alt="line3" />
+
+<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9D%AF+INTP+%E2%86%92+int+*p++%2F%2F+personality+is+just+a+pointer&width=600&height=28&font=Fira%20Code&size=15&pause=800&color=89CFF0&vCenter=true&repeat=false" alt="line4" />
 
 </div>
 
@@ -17,10 +18,14 @@
   <img alt="Contribution Snake" src="https://raw.githubusercontent.com/MInTuIW/MInTuIW/output/snake-dark.svg" />
 </picture>
 
-<!-- Daily Joke -->
+<!-- Daily Joke (auto-updated, dim color) -->
+<div align="center">
+<sub><code>
 <!-- JOKE:START -->
 Why did the data scientist break up with the database? Too many relationships.
 <!-- JOKE:END -->
+</code></sub>
+</div>
 
 <br>
 
