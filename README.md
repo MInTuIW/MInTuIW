@@ -9,12 +9,8 @@
 
 <br>
 
-<!-- Daily Joke -->
-<font color="#6B9DB5">
-<!-- JOKE:START -->
-Why did the data scientist break up with the database? Too many relationships.
-<!-- JOKE:END -->
-</font>
+<!-- Daily Joke (auto-updated SVG with fade-in) -->
+<img src="assets/joke.svg" alt="Daily Joke" />
 
 <br>
 
