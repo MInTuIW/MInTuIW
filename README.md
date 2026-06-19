@@ -1,12 +1,5 @@
-<!-- Typing Header -->
-
-<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9D%AF+Hi+there+%F0%9F%91%8B+I'm+wangyihan&width=600&height=28&font=Fira%20Code&size=15&pause=2000&color=89CFF0&vCenter=true" alt="line1" />
-
-<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9D%AF+Data+%26+AI+%C2%B7+building+things+that+learn&width=600&height=28&font=Fira%20Code&size=15&pause=2000&color=89CFF0&vCenter=true" alt="line2" />
-
-<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9D%AF+MSc+Data+Science+%C2%B7+NLP+%C2%B7+%40UMAC&width=600&height=28&font=Fira%20Code&size=15&pause=2000&color=89CFF0&vCenter=true" alt="line3" />
-
-<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9D%AF+INTP+%E2%86%92+int+*p++%2F%2F+personality+is+just+a+pointer&width=600&height=28&font=Fira%20Code&size=15&pause=2000&color=89CFF0&vCenter=true" alt="line4" />
+<!-- Typing Header (custom SVG with glacier blue gradient) -->
+<img src="assets/header.svg" alt="Typing Header" />
 
 <!-- Snake Animation -->
 <picture>
