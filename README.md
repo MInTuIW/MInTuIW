@@ -9,8 +9,8 @@
 
 <br>
 
-<!-- Daily Joke (auto-updated SVG with fade-in) -->
-<img src="assets/joke.svg" alt="Daily Joke" />
+<!-- Daily Joke (typing effect, no rollback) -->
+<img src="https://readme-typing-svg.demolab.com/?lines=<!-- JOKE:START -->Why+did+the+data+scientist+break+up+with+the+database%3F+Too+many+relationships.<!-- JOKE:END -->&width=600&height=28&font=Fira%20Code&size=15&pause=5000&color=89CFF0&vCenter=true&repeat=false" alt="" />
 
 <br>
 
