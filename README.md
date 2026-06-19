@@ -1,20 +1,10 @@
-<!-- Header: glacier blue gradient typing with rollback -->
+<!-- Header: glacier blue gradient typing with infinite loop -->
 <img src="assets/header.svg" alt="" />
 
 <br>
 
-<!-- Wave Divider -->
-<img src="assets/wave.svg" alt="" />
-
-<br>
-
-<!-- Daily Joke: gradient typing, no rollback -->
+<!-- Daily Joke: per-character gradient typing, no rollback -->
 <img src="assets/joke.svg" alt="" />
-
-<br>
-
-<!-- Code Rain -->
-<img src="assets/code-rain.svg" alt="" />
 
 <br>
 
@@ -32,7 +22,12 @@
 
 <br>
 
-<!-- Snake Animation -->
+<!-- Wave Divider -->
+<img src="assets/wave.svg" alt="" />
+
+<br>
+
+<!-- Snake Animation (mint blue-green gradient) -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/snake-light.svg" />
