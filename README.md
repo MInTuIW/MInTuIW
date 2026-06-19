@@ -1,19 +1,12 @@
+<!-- Terminal-style header -->
 <div align="center">
 
-  <!-- Typing SVG header -->
-  <a href="https://github.com/MInTuIW">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Hi+there+%F0%9F%91%8B+I'm+wangyihan;Data+%26+AI+%C2%B7+building+things+that+learn;MSc+Data+Science+%C2%B7+NLP+%C2%B7+%40UMAC;INTP+%E2%86%92+int+*p++%2F%2F+personality+is+just+a+pointer&center=true&width=600&height=120&font=Fira%20Code&size=18&pause=1000&color=89CFF0&vCenter=true&random=false" alt="Typing SVG" />
-  </a>
-
-  <!-- Tech Stack -->
-  <div style="margin: 20px 0;">
-    <a href="https://www.python.org/"><img src="https://skillicons.dev/icons?i=python" alt="Python" width="40" height="40"/></a>
-    <a href="https://dotnet.microsoft.com/languages/csharp"><img src="https://skillicons.dev/icons?i=cs" alt="C#" width="40" height="40"/></a>
-    <a href="https://vuejs.org/"><img src="https://skillicons.dev/icons?i=vue" alt="Vue" width="40" height="40"/></a>
-    <a href="https://git-scm.com/"><img src="https://skillicons.dev/icons?i=git" alt="Git" width="40" height="40"/></a>
-    <a href="https://www.docker.com/"><img src="https://skillicons.dev/icons?i=docker" alt="Docker" width="40" height="40"/></a>
-    <a href="https://www.mysql.com/"><img src="https://skillicons.dev/icons?i=mysql" alt="SQL" width="40" height="40"/></a>
-  </div>
+<pre style="background:transparent;border:none;color:#c9d1d9;font-family:'Fira Code','Cascadia Code',monospace;font-size:15px;line-height:1.7;text-align:left;">
+<span style="color:#89CFF0;">❯</span> Hi there 👋 I'm wangyihan
+<span style="color:#89CFF0;">❯</span> Data & AI · building things that learn
+<span style="color:#89CFF0;">❯</span> MSc Data Science · NLP · @UMAC
+<span style="color:#89CFF0;">❯</span> INTP → int *p  <span style="color:#8b949e;">// personality is just a pointer</span>
+</pre>
 
 </div>
 
@@ -24,27 +17,14 @@
   <img alt="Contribution Snake" src="https://raw.githubusercontent.com/MInTuIW/MInTuIW/output/snake-dark.svg" />
 </picture>
 
----
+<!-- Daily Joke -->
+<!-- JOKE:START -->
+Why did the data scientist break up with the database? Too many relationships.
+<!-- JOKE:END -->
 
-<!-- Contact & Fun -->
-<div align="center">
+<br>
 
-  <!-- Email Badge -->
-  <a href="mailto:wang.yihan@connect.um.edu.mo">
-    <img src="https://img.shields.io/badge/Email-联系我-89CFF0?style=flat-square&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-
-  <!-- Daily Joke -->
-  <details>
-    <summary><b>💬 今日冷笑话</b></summary>
-    <br>
-    <!-- JOKE:START -->
-    这里每日会更新一句程序员冷笑话 🥶
-    <!-- JOKE:END -->
-  </details>
-
-  <br>
-
-  <sub>⭐ 感谢来访 · 欢迎 Star</sub>
-
+<!-- Tech Stack -->
+<div align="right">
+  <sub><code>🐍 Python · 💻 C# · ⚡ Vue · 🌿 Git · 🐳 Docker · 🗄️ SQL</code></sub>
 </div>
