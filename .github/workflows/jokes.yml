@@ -1,64 +1,40 @@
 name: Update Daily Joke
-
 on:
   schedule:
     - cron: "5 0 * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   update-joke:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Generate joke SVG with gradient typing
+      - name: Generate joke SVG
         run: |
           python3 -c "
 import json, random
-
 with open('.github/jokes.json', 'r') as f:
     jokes = json.load(f)
-
 joke = random.choice(jokes)
-
-# Gradient: from bright glacier blue to dim glacier blue
-sr, sg, sb = 137, 207, 240  # #89CFF0
-er, eg, eb = 107, 157, 181  # #6B9DB5
-total = len(joke)
-rate = 0.06
-
-svg = '<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"780\" height=\"28\" font-family=\"monospace\" font-size=\"14\">'
-svg += '<style>.c{opacity:0;animation:t 0.03s forwards;animation-delay:var(--d)}@keyframes t{to{opacity:1}}</style>'
-svg += '<rect width=\"780\" height=\"28\" fill=\"transparent\"/>'
-svg += '<text y=\"20\">'
-
+sr, sg, sb = 137, 207, 240
+er, eg, eb = 107, 157, 181
+svg = '<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"780\" height=\"28\" font-family=\"monospace\" font-size=\"14\"><style>.c{opacity:0;animation:t 0.03s forwards;animation-delay:var(--d)}@keyframes t{to{opacity:1}}</style><rect width=\"780\" height=\"28\" fill=\"transparent\"/><text y=\"20\">'
 for i, ch in enumerate(joke):
-    t = i / max(total - 1, 1)
-    r = int(sr + (er - sr) * t)
-    g = int(sg + (eg - sg) * t)
-    b = int(sb + (eb - sb) * t)
-    color = f'#{r:02x}{g:02x}{b:02x}'
+    t = i / max(len(joke)-1, 1)
+    r = int(sr + (er-sr)*t); g = int(sg + (eg-sg)*t); b = int(sb + (eb-sb)*t)
     esc = ch
     if ch == '&': esc = '&amp;'
     elif ch == '<': esc = '&lt;'
     elif ch == '>': esc = '&gt;'
-    elif ch == chr(39): esc = '&apos;'
-    elif ch == chr(34): esc = '&quot;'
-    delay = i * rate
-    svg += f'<tspan class=\"c\" style=\"--d:{delay:.2f}s\" fill=\"{color}\">{esc}</tspan>'
-
+    elif ch in \"'\\\"\": esc = '&apos;'
+    svg += f'<tspan class=\"c\" style=\"--d:{i*0.06:.2f}s\" fill=\"#{r:02x}{g:02x}{b:02x}\">{esc}</tspan>'
 svg += '</text></svg>'
-
 with open('assets/joke.svg', 'w') as f:
     f.write(svg)
-
-print(f'Generated joke.svg: {joke}')
+print(f'Done: {joke}')
 "
-
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
