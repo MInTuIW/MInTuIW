@@ -9,6 +9,18 @@
 
 <br>
 
+<!-- Wave Divider -->
+<svg width="600" height="30" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="waveG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#89CFF0"/><stop offset="100%" stop-color="#5DADE2"/>
+    </linearGradient>
+  </defs>
+  <path d="M0 15 Q75 0 150 15 Q225 30 300 15 Q375 0 450 15 Q525 30 600 15" fill="none" stroke="url(#waveG)" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-12,0;0,0" dur="3s" repeatCount="indefinite"/>
+  </path>
+</svg>
+
 <!-- Daily Joke (typing effect, no rollback) -->
 <img src="https://readme-typing-svg.demolab.com/?lines=Why%20did%20the%20data%20scientist%20break%20up%20with%20the%20database%3F%20Too%20many%20relationships.&width=600&height=28&font=Fira%20Code&size=15&pause=5000&color=89CFF0&vCenter=true&repeat=false" alt="" />
 <!-- JOKE_MARKER -->
