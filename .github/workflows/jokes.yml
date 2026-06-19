@@ -1,0 +1,51 @@
+name: Update Daily Joke
+
+on:
+  schedule:
+    - cron: "30 0 * * *"   # 每天 UTC 0:30（比 snake 晚半小时）
+  workflow_dispatch:
+
+jobs:
+  update-joke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pick random joke & update README
+        run: |
+          python3 -c "
+import json, random
+
+with open('.github/jokes.json', 'r') as f:
+    jokes = json.load(f)
+
+joke = random.choice(jokes)
+
+with open('README.md', 'r') as f:
+    content = f.read()
+
+start = '<!-- JOKE:START -->'
+end = '<!-- JOKE:END -->'
+
+if start in content and end in content:
+    before = content.split(start)[0]
+    after = content.split(end)[1]
+    new_content = before + start + '\n' + joke + '\n' + end + after
+else:
+    print('ERROR: JOKE markers not found in README.md')
+    exit(1)
+
+with open('README.md', 'w') as f:
+    f.write(new_content)
+
+print(f'Updated joke: {joke}')
+"
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "chore: update daily joke [skip ci]"
+          git push
