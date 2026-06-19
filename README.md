@@ -22,7 +22,7 @@
 </svg>
 
 <!-- Daily Joke (typing effect, no rollback) -->
-<img src="https://readme-typing-svg.demolab.com/?lines=Why%20did%20the%20data%20scientist%20break%20up%20with%20the%20database%3F%20Too%20many%20relationships.&width=600&height=28&font=Fira%20Code&size=15&pause=5000&color=89CFF0&vCenter=true&repeat=false" alt="" />
+<img src="https://readme-typing-svg.demolab.com/?lines=Why%20did%20the%20data%20scientist%20break%20up%20with%20the%20database%3F%20Too%20many%20relationships.&width=780&height=28&font=Fira%20Code&size=14&pause=5000&color=89CFF0&vCenter=true&repeat=false" alt="" />
 <!-- JOKE_MARKER -->
 
 <br>
