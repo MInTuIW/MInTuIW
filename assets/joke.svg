@@ -1,0 +1,7 @@
+<svg width="650" height="28" xmlns="http://www.w3.org/2000/svg">
+<style>
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  .j {{ animation: fadeIn 1.5s ease-out; }}
+</style>
+<text x="0" y="18" fill="#6B9DB5" font-family="monospace" font-size="13" class="j">Why did the data scientist break up with the database? Too many relationships.</text>
+</svg>
