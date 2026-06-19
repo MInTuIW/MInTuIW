@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>动效演示</title>
+<style>
+  body { background:#0d1117; color:#c9d1d9; font-family:monospace; padding:40px; max-width:700px; margin:auto; }
+  h2 { color:#89CFF0; font-size:18px; margin:40px 0 10px; border-bottom:1px solid #30363d; padding-bottom:8px; }
+  .demo-box { background:#161b22; border:1px solid #30363d; border-radius:8px; padding:20px; margin:10px 0 30px; overflow:hidden; }
+</style>
+</head>
+<body>
+
+<h1>🎨 动效演示</h1>
+<p style="color:#8b949e;">以下效果都可在 GitHub README 中实现</p>
+
+<!-- 1. 渐变流动 -->
+<h2>1. 🌈 渐变流动</h2>
+<div class="demo-box">
+  <svg width="600" height="50" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#89CFF0">
+          <animate attributeName="stop-color" values="#89CFF0;#5DADE2;#B0E0E6;#89CFF0" dur="4s" repeatCount="indefinite" />
+        </stop>
+        <stop offset="50%" stop-color="#5DADE2">
+          <animate attributeName="stop-color" values="#5DADE2;#B0E0E6;#89CFF0;#5DADE2" dur="4s" repeatCount="indefinite" />
+        </stop>
+        <stop offset="100%" stop-color="#B0E0E6">
+          <animate attributeName="stop-color" values="#B0E0E6;#89CFF0;#5DADE2;#B0E0E6" dur="4s" repeatCount="indefinite" />
+        </stop>
+      </linearGradient>
+    </defs>
+    <text x="20" y="35" fill="url(#flowGrad)" font-size="24" font-weight="bold">✦ 冰川蓝在流动 · colors are flowing ✦</text>
+  </svg>
+  <p style="color:#8b949e;font-size:12px;">文字填充色随时间循环变化，像光在流动</p>
+</div>
+
+<!-- 2. 动态统计卡片 -->
+<h2>2. 📊 动态统计卡片</h2>
+<div class="demo-box">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <svg width="180" height="100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="180" height="100" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <text x="90" y="30" text-anchor="middle" fill="#8b949e" font-size="11">⭐ Stars</text>
+      <text x="90" y="60" text-anchor="middle" fill="#89CFF0" font-size="28" font-weight="bold">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+        75
+      </text>
+    </svg>
+    <svg width="180" height="100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="180" height="100" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <text x="90" y="30" text-anchor="middle" fill="#8b949e" font-size="11">📦 Repos</text>
+      <text x="90" y="60" text-anchor="middle" fill="#89CFF0" font-size="28" font-weight="bold">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2.3s" repeatCount="indefinite"/>
+        7
+      </text>
+    </svg>
+    <svg width="180" height="100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="180" height="100" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <text x="90" y="30" text-anchor="middle" fill="#8b949e" font-size="11">🔗 Following</text>
+      <text x="90" y="60" text-anchor="middle" fill="#89CFF0" font-size="28" font-weight="bold">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+        4
+      </text>
+    </svg>
+  </div>
+  <p style="color:#8b949e;font-size:12px;">数字轻柔呼吸闪烁，类似 GitHub Stats 卡片效果</p>
+</div>
+
+<!-- 3. 进度条动画 -->
+<h2>3. 📈 进度条动画</h2>
+<div class="demo-box">
+  <div style="margin:8px 0;">
+    <div style="display:flex;justify-content:space-between;font-size:13px;color:#8b949e;">
+      <span>🐍 Python</span><span>80%</span>
+    </div>
+    <svg width="100%" height="20" xmlns="http://www.w3.org/2000/svg">
+      <rect width="600" height="12" rx="6" fill="#30363d"/>
+      <rect width="0" height="12" rx="6" fill="url(#bar1)">
+        <animate attributeName="width" from="0" to="480" dur="2s" fill="freeze"/>
+      </rect>
+      <defs><linearGradient id="bar1" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#89CFF0"/><stop offset="100%" stop-color="#5DADE2"/>
+      </linearGradient></defs>
+    </svg>
+  </div>
+  <div style="margin:8px 0;">
+    <div style="display:flex;justify-content:space-between;font-size:13px;color:#8b949e;">
+      <span>💻 C#</span><span>65%</span>
+    </div>
+    <svg width="100%" height="20" xmlns="http://www.w3.org/2000/svg">
+      <rect width="600" height="12" rx="6" fill="#30363d"/>
+      <rect width="0" height="12" rx="6" fill="url(#bar2)">
+        <animate attributeName="width" from="0" to="390" dur="1.5s" begin="0.3s" fill="freeze"/>
+      </rect>
+      <defs><linearGradient id="bar2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#89CFF0"/><stop offset="100%" stop-color="#6BB8D8"/>
+      </linearGradient></defs>
+    </svg>
+  </div>
+  <div style="margin:8px 0;">
+    <div style="display:flex;justify-content:space-between;font-size:13px;color:#8b949e;">
+      <span>⚡ Vue</span><span>45%</span>
+    </div>
+    <svg width="100%" height="20" xmlns="http://www.w3.org/2000/svg">
+      <rect width="600" height="12" rx="6" fill="#30363d"/>
+      <rect width="0" height="12" rx="6" fill="url(#bar3)">
+        <animate attributeName="width" from="0" to="270" dur="1s" begin="0.6s" fill="freeze"/>
+      </rect>
+      <defs><linearGradient id="bar3" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#89CFF0"/><stop offset="100%" stop-color="#89CFF0"/>
+      </linearGradient></defs>
+    </svg>
+  </div>
+  <p style="color:#8b949e;font-size:12px;">加载时逐条从 0 展开到目标值，可做成技术栈熟练度</p>
+</div>
+
+<!-- 4. 波浪分隔线 -->
+<h2>4. 🌊 波浪分隔线</h2>
+<div class="demo-box">
+  <svg width="600" height="40" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#89CFF0"/><stop offset="100%" stop-color="#5DADE2"/>
+      </linearGradient>
+    </defs>
+    <path d="M0 20 Q75 0 150 20 Q225 40 300 20 Q375 0 450 20 Q525 40 600 20" fill="none" stroke="url(#waveGrad)" stroke-width="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-20,0;0,0" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </svg>
+  <p style="color:#8b949e;font-size:12px;">波浪线左右微微摆动，适合做区块分割</p>
+</div>
+
+<!-- 5. 代码雨 -->
+<h2>5. 🌧️ 代码雨</h2>
+<div class="demo-box">
+  <svg width="600" height="100" xmlns="http://www.w3.org/2000/svg" style="background:#000;">
+    <style>
+      @keyframes fall { 0% { transform:translateY(-20px); opacity:0; } 20% { opacity:1; } 100% { transform:translateY(100px); opacity:0; } }
+      .r{ animation:fall 3s linear infinite; }
+      .d1{ animation-delay:0s; }.d2{ animation-delay:0.3s; }.d3{ animation-delay:0.6s; }
+      .d4{ animation-delay:1s; }.d5{ animation-delay:1.5s; }.d6{ animation-delay:2s; }
+    </style>
+    <text x="20" y="0" fill="#89CFF0" font-size="11" class="r d1">0100101</text>
+    <text x="80" y="0" fill="#89CFF0" font-size="11" class="r d2">1011010</text>
+    <text x="150" y="0" fill="#5DADE2" font-size="11" class="r d3">1101001</text>
+    <text x="220" y="0" fill="#89CFF0" font-size="11" class="r d4">0010110</text>
+    <text x="290" y="0" fill="#5DADE2" font-size="11" class="r d5">def foo</text>
+    <text x="350" y="0" fill="#89CFF0" font-size="11" class="r d6">while()</text>
+    <text x="410" y="0" fill="#89CFF0" font-size="11" class="r d1">import</text>
+    <text x="480" y="0" fill="#5DADE2" font-size="11" class="r d3">class A</text>
+    <text x="540" y="0" fill="#89CFF0" font-size="11" class="r d5">return</text>
+  </svg>
+  <p style="color:#8b949e;font-size:12px;">字符像黑客帝国一样往下掉，但要注意别太花哨抢了正文的风头</p>
+</div>
+
+<p style="margin-top:40px;color:#8b949e;font-size:12px;">💡 用浏览器打开此文件可看到完整动画效果。GitHub README 中可嵌入 SVG 实现类似效果。</p>
+</body></html>
