@@ -9,36 +9,13 @@ jobs:
   update-joke:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Generate joke SVG
-        run: |
-          python3 -c "
-import json, random
-with open('.github/jokes.json', 'r') as f:
-    jokes = json.load(f)
-joke = random.choice(jokes)
-sr, sg, sb = 137, 207, 240
-er, eg, eb = 107, 157, 181
-svg = '<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"780\" height=\"28\" font-family=\"monospace\" font-size=\"14\"><style>.c{opacity:0;animation:t 0.03s forwards;animation-delay:var(--d)}@keyframes t{to{opacity:1}}</style><rect width=\"780\" height=\"28\" fill=\"transparent\"/><text y=\"20\">'
-for i, ch in enumerate(joke):
-    t = i / max(len(joke)-1, 1)
-    r = int(sr + (er-sr)*t); g = int(sg + (eg-sg)*t); b = int(sb + (eb-sb)*t)
-    esc = ch
-    if ch == '&': esc = '&amp;'
-    elif ch == '<': esc = '&lt;'
-    elif ch == '>': esc = '&gt;'
-    elif ch in \"'\\\"\": esc = '&apos;'
-    svg += f'<tspan class=\"c\" style=\"--d:{i*0.06:.2f}s\" fill=\"#{r:02x}{g:02x}{b:02x}\">{esc}</tspan>'
-svg += '</text></svg>'
-with open('assets/joke.svg', 'w') as f:
-    f.write(svg)
-print(f'Done: {joke}')
-"
+        run: python3 .github/scripts/update_joke.py
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/joke.svg
-          git diff --staged --quiet || git commit -m "chore: update daily joke [skip ci]"
+          git diff --staged --quiet || git commit -m "chore: update daily joke"
           git push
