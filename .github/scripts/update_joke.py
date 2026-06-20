@@ -6,8 +6,8 @@ with open(jokes_file, 'r') as f:
 
 joke = random.choice(jokes)
 
-sr, sg, sb = 232, 248, 255  # near-white ice blue
-er, eg, eb = 93, 173, 226   # deep glacier blue
+sr, sg, sb = 93, 173, 226   # deep glacier blue (left)
+er, eg, eb = 232, 248, 255  # near-white ice blue (right)
 
 parts = ['<svg xmlns="http://www.w3.org/2000/svg" width="780" height="28" font-family="monospace" font-size="14">']
 parts.append('<style>.c{opacity:0;animation:t 0.03s forwards;animation-delay:var(--d)}@keyframes t{to{opacity:1}}</style>')
